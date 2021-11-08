@@ -1,4 +1,4 @@
-#include "linked_list.h"
+#include "../include/linked_list.h"
 /*
  * Linked list
  */
@@ -38,6 +38,15 @@ void print_list (node * p)
 {
     // Add your code for exercise 1
     // There is NO testcode for this
+
+    if (p == NULL) // simple case #1
+      return;
+    else
+    {
+      printf("%d ", p -> value); // first print the value of the first node in linked list
+      print_list(p -> next); // recursive step for next nodes until we reach end of linked list
+    }
+  
 }
 
 int sum_squares (node * p)
@@ -57,4 +66,23 @@ node *map (node * p, int (*f) (int))
 int square (int x)
 {
   return x * x;
+}
+
+// insert function used in test case in main.cpp
+// inserts node at the end of linked list
+node *insert (node * p, int val)
+{
+  node * temp = (struct node*)malloc(sizeof(struct node));
+  temp -> value = val;
+  temp -> next = NULL;
+  if (p == NULL) // if list is empty
+    p = temp;
+  else
+  {
+    node *temp1 = p;
+    while (temp1 -> next != NULL) // wait until temp1 is at the end of linked list before insterting
+      temp1 = temp1 -> next;
+    temp1 -> next = temp;
+  }
+return p;
 }
