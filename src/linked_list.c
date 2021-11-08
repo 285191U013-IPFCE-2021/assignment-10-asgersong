@@ -80,7 +80,7 @@ node *insert (node * p, int val)
   else
   {
     node *temp1 = p;
-    while (temp1 -> next != NULL) // wait until temp1 is at the end of linked list before insterting
+    while (temp1 -> next != NULL) // wait until temp1 is at the end of linked list before inserting
       temp1 = temp1 -> next;
     temp1 -> next = temp;
   }
