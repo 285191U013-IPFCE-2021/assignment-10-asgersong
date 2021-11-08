@@ -9,7 +9,7 @@ extern "C"{
 int main(int argc, char **argv)
 {
     // testing print_list function:
-    node * p = NULL;
+    node * p = NULL; // linked list starts out empty
     p = insert(p,2);
     p = insert(p,4);
     p = insert(p,8);

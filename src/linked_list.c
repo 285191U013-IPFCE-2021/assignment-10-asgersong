@@ -46,7 +46,7 @@ void print_list (node * p)
       printf("%d ", p -> value); // first print the value of the first node in linked list
       print_list(p -> next); // recursive step for next nodes until we reach end of linked list
     }
-  
+
 }
 
 int sum_squares (node * p)
