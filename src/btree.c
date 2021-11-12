@@ -67,7 +67,7 @@ struct tree_node * Remove (int x, struct tree_node *t)
     // case #2: tree_node has either only left or right => replace the tree_node with left/right
     else if (t -> left == NULL || t -> right == NULL)
     {
-      struct tree_node * temp = t -> left;
+      struct tree_node * temp = NULL; // temporary tree_node-pointer which is initially NULL
       if (t -> right == NULL)
         temp = t -> left;
      
