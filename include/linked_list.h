@@ -8,7 +8,7 @@ typedef struct node
 } node;
 
 node *make_node (int v, node * q);
-void free_list (node * p);
+node *free_list (node * p); // changed function signature from "void" to "node *"
 void print_list (node * p);
 int sum_squares (node * p);
 node *map (node * p, int (*f) (int));
